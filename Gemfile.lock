@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    spree-midtrans-gateway (0.1.0)
+    spree_midtrans_gateway (0.1.0)
       spree_core (~> 3.1, < 4.0)
       veritrans (~> 2.2)
 
@@ -257,7 +257,7 @@ DEPENDENCIES
   rake (~> 10.0)
   rspec (~> 3)
   rubocop (~> 0.50)
-  spree-midtrans-gateway!
+  spree_midtrans_gateway!
 
 BUNDLED WITH
    1.16.0.pre.2

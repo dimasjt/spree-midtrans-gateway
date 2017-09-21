@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "spree_midtrans_gateway/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "spree-midtrans-gateway"
+  spec.name          = "spree_midtrans_gateway"
   spec.version       = SpreeMidtransGateway::VERSION
   spec.authors       = ["Dimas J. Taniawan"]
   spec.email         = ["dimazniawan@gmail.com"]
