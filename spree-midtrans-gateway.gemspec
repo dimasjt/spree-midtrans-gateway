@@ -14,11 +14,8 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/dimasjt/spree_midtrans_gateway"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
-    f.match(%r{^(test|spec|features)/})
-  end
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.files         = `git ls-files`.split("\n")
+  spec.test_files    = `git ls-files -- spec/*`.split("\n")
   spec.require_paths = ["lib"]
 
   spec.required_ruby_version = ">= 2.1.0"

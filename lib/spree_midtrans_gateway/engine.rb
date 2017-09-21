@@ -4,7 +4,7 @@ module SpreeMidtransGateway
     isolate_namespace Spree
     engine_name "spree_midtrans_gateway"
 
-    config.autoload_paths += ["#{config.root}/lib"]
+    config.autoload_paths += %W(#{config.root}/lib)
 
     def self.activate
       Dir.glob(File.join(File.dirname(__FILE__), '../../app/**/*_decorator*.rb')) do |c|

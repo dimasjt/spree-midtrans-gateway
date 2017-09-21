@@ -1,3 +1,5 @@
+require "veritrans"
+
 module Spree
   class Gateway::MidtransGateway < Gateway
     preference :client_key, :string
