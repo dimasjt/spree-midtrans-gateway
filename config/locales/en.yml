@@ -1,0 +1,5 @@
+en:
+  spree:
+    midtrans:
+      pay_with_midtrans: Pay through Midtrans
+      info: You will redirect to Midtrans page

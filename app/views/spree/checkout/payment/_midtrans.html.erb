@@ -1,0 +1,2 @@
+<%= link_to Spree.t("pay_with_midtrans", scope: :midtrans), midtrans_charge_url(payment_method_id: payment_method.id), method: :post, id: "payment-midtrans" %>
+<span><%= Spree.t("info", scope: :midtrans) %></span>

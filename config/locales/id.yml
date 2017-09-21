@@ -1,0 +1,5 @@
+en:
+  spree:
+    midtrans:
+      pay_with_midtrans: Bayar melalui Midtrans
+      info: Kamu akan dialihkan ke halaman pembayaran Midtrans
