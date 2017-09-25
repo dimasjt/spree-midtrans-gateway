@@ -24,12 +24,6 @@ module Spree
     def success
       order = Spree::Order.find_by!(number: params[:order_id])
 
-      if order.complete?
-        order.payment_state = 'paid'
-        order.save
-        flash.notice = Spree.t(:order_processed_successfully)
-      end
-
       redirect_to order_path(order)
     end
 
@@ -39,10 +33,15 @@ module Spree
       order = Spree::Order.find_by_number(params[:order_id])
 
       order.payment_state =
-        if params[:status_code] == "200" && params[:fraud_status] == "accept"
-          'paid'
-        else
-          'failed'
+        case params[:transaction_status]
+        when "expired", "cancel"
+          "failed"
+        when "pending"
+          "pending"
+        when "capture"
+          "processing"
+        when "settlement"
+          "completed"
         end
 
       order.save
