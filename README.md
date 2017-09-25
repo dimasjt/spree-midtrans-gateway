@@ -1,8 +1,4 @@
-# Spree::Midtrans::Gateway
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/spree/midtrans/gateway`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+# Midtrans Gateway for Spree
 
 ## Installation
 
@@ -15,14 +11,29 @@ gem 'spree_midtrans_gateway'
 And then execute:
 
     $ bundle
+* Add new payment method in admin. http://host/admin/payment_methods/new
 
-Or install it yourself as:
+* Fill form
 
-    $ gem install spree_midtrans_gateway
+to get client key and server key https://dashboard.sandbox.midtrans.com/settings/config_info
 
-## Usage
+|Field|Value|
+|---|---|
+|Provider| Spree::Gateway::MidtransGateway|
+|Client Key||
+|Server Key||
+|Name|string|
+|Test Mode|_check_ if use sandbox|
 
-TODO: Write usage instructions here
+* Setup redirect configuration in Midtrans dashboard
+https://dashboard.sandbox.midtrans.com/settings/vtweb_configuration
+
+|Field|Value|
+|---|---|
+|Payment Notification|http://host.com/payment/midtrans/notifications|
+|Finish Redirect|http://host.com/payment/midtrans/succcess|
+|Unfinish Redirect|http://host.com/checkout/payment|
+|Error Redirect|http://host.com/checkout/payment|
 
 ## Development
 
